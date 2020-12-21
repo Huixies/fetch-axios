@@ -37,7 +37,7 @@ new Vue({
             // )
             axios.post('http://jsonplaceholder.typicode.com/posts', this.todo)
                 .then(res => {
-                    this.todos.unshift(res.data);
+                    this.todos.push(res.data);
             })
         }
     }
