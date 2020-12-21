@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title >Document</title>
+</head>
+<body>
+<div id="one" >
+  <div id='one'>
+      <form @submit.prevent='onSubmit'>
+          <input type="text" v-model='todo.title' />
+          <input type="submit" value="提交" />   
+      </form>
+  </div>
+    <ul>
+        <li v-for='todo in todos'>
+            <a v-if='todo.id'>{{todo.id}}</a>.
+            <a>{{todo.title}}</a> 
+        </li>
+    </ul>
+</div>
+
+
+</body> 
+<script src="app.js"></script>
+</html>
